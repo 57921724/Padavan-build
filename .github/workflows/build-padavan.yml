@@ -67,6 +67,8 @@ jobs:
         sed -i '/CONFIG_FIRMWARE_INCLUDE_TUNSAFE/d' .config #删除配置项adbyby plus+
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SRELAY/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_XRAY/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_SMBD/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_SMBD36/d' .config
         sed -i 's/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE=n/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE=y/g' .config
         ######################################################################
         #以下选项是定义你需要的功能（y=集成,n=忽略），重新写入到.config文件
@@ -75,6 +77,8 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS=y" >> .config #集成xray执行文件  ~4.5M
         echo "CONFIG_FIRMWARE_INCLUDE_SSSERVER=y" >> .config #集成xray执行文件  ~4.5M
         echo "CONFIG_FIRMWARE_INCLUDE_XRAY=y" >> .config #集成xray执行文件  ~4.5M
+        echo "CONFIG_FIRMWARE_INCLUDE_SMBD=y" >> .config # Include SMB (and WINS) server. ~1.5MB
+        echo "CONFIG_FIRMWARE_INCLUDE_SMBD36=y" >> .config # using samba3.6 instead of samba3
         fi
         #########################################################################################
         #自定义添加其它功能请参考源码configs/templates/目录下的config文件。按照上面的格式添加即可
