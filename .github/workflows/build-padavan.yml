@@ -86,7 +86,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_SMBD36=y" >> .config # using samba3.6 instead of samba3
         echo "CONFIG_FIRMWARE_INCLUDE_FTPD=y" >> .config 
         echo "CONFIG_FIRMWARE_INCLUDE_OPENSSH=y" >> .config 
-        cho "CONFIG_FIRMWARE_INCLUDE_OPENVPN=y" >> .config 
+        echo "CONFIG_FIRMWARE_INCLUDE_OPENVPN=y" >> .config 
         echo "CONFIG_FIRMWARE_INCLUDE_SFTP=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_CIFS=y" >> .config
         fi
