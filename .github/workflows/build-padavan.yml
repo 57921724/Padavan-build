@@ -70,6 +70,7 @@ jobs:
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SMBD/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SMBD36/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SFTP/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_SQM-QOS/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENSSH/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENVPN/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_FTPD/d' .config # Include FTP server. ~0.2MB
@@ -84,6 +85,8 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_XRAY=y" >> .config #集成xray执行文件  ~4.5M
         echo "CONFIG_FIRMWARE_INCLUDE_SMBD=y" >> .config # Include SMB (and WINS) server. ~1.5MB
         echo "CONFIG_FIRMWARE_INCLUDE_SMBD36=y" >> .config # using samba3.6 instead of samba3
+        echo "CONFIG_FIRMWARE_INCLUDE_OPENVPN=y" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_SQM-QOS=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_FTPD=y" >> .config 
         echo "CONFIG_FIRMWARE_INCLUDE_SFTP=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_CIFS=y" >> .config
